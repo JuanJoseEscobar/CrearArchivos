@@ -5,6 +5,15 @@
  */
 package modelo;
 
+import java.io.FileWriter;
+import java.util.LinkedList;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
+
+
+
 /**
  *
  * @author juan_jose.escobar
@@ -62,6 +71,38 @@ public class Estudiante extends Persona implements Comparable<Estudiante>{
         
         
         return nombre.compareTo(t.getNombre()); 
+    }
+
+    public boolean creacionArchivoXML(LinkedList<Estudiante> ListaE) {
+        boolean g = false;
+        
+        try {
+            
+            Element universidad = new Element("universidad");
+            Document doc = new Document(universidad);
+            
+            for (int i=0;i < ListaE.size();i++) {
+                Element estudiante = new Element("estudiante");
+                
+                estudiante.addContent(new Element("nombre").setText(ListaE.get(i).getNombre()));
+                estudiante.addContent(new Element("telefono").setText(ListaE.get(i).getTelefono()));
+                estudiante.addContent(new Element("correo").setText(ListaE.get(i).getCorreo()));
+                estudiante.addContent(new Element("codigo").setText(ListaE.get(i).getCodigo()));
+                estudiante.addContent(new Element("carrera").setText(ListaE.get(i).getCarrera()));
+                
+                doc.getRootElement().addContent(estudiante);
+                
+            }
+            XMLOutputter xmlOutput = new XMLOutputter();
+            xmlOutput.setFormat(Format.getPrettyFormat());
+            xmlOutput.output(doc, new FileWriter("universidad.xml"));
+            
+        } catch (Exception e) {
+        }
+        
+        
+        
+        return g;
     }
     
     

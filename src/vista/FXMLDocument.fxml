@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="creacionararchivos.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="403.0" prefWidth="446.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="creacionararchivos.FXMLDocumentController">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+        <Button fx:id="buttonAE" layoutX="68.0" layoutY="327.0" onAction="#CrearE" prefHeight="40.0" prefWidth="128.0" text="Agregar Estudiantes" />
+        <Label fx:id="label" layoutX="114.0" layoutY="26.0" minHeight="16" minWidth="69" prefHeight="40.0" prefWidth="230.0" text="Agregar Estudiantes">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="label1" layoutX="23.0" layoutY="78.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="110.0" text="Nombre" />
+      <Label fx:id="label11" layoutX="23.0" layoutY="120.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="110.0" text="telefono" />
+      <Label fx:id="label12" layoutX="23.0" layoutY="162.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="110.0" text="Correo" />
+      <Label fx:id="label13" layoutX="23.0" layoutY="202.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="110.0" text="codigo" />
+      <Label fx:id="label14" layoutX="23.0" layoutY="252.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="110.0" text="Carrera" />
+      <TextField fx:id="Nombrefl" layoutX="159.0" layoutY="78.0" />
+      <TextField fx:id="telefonofl" layoutX="159.0" layoutY="120.0" />
+      <TextField fx:id="correofl" layoutX="159.0" layoutY="162.0" />
+      <TextField fx:id="codigofl" layoutX="159.0" layoutY="202.0" />
+      <TextField fx:id="carrerafl" layoutX="159.0" layoutY="252.0" />
+      <Button fx:id="buttonGA" layoutX="238.0" layoutY="327.0" onAction="#GuardarXML" prefHeight="40.0" prefWidth="135.0" text="Guardar archivo xml" />
     </children>
 </AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<universidad>
+  <estudiante>
+    <nombre>gsdgsdfgd</nombre>
+    <telefono>dfgdfgsdf</telefono>
+    <correo>gdsfgdfg</correo>
+    <codigo>dfgsdfgsdf</codigo>
+    <carrera>dsfgsdfgfdgdf</carrera>
+  </estudiante>
+  <estudiante>
+    <nombre>gsdgsdfgddfsgds</nombre>
+    <telefono>dfgdfgsdfsdfgdf</telefono>
+    <correo>gdsfgdfgsgfsdgd</correo>
+    <codigo>dfgsdfgsdffdgdsfg</codigo>
+    <carrera>dsfgsdfgfdgdfdfsgdsfg</carrera>
+  </estudiante>
+</universidad>
